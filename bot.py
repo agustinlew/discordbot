@@ -71,4 +71,13 @@ async def ls(ctx):
     guild = discord.utils.get(bot.guilds, name=GUILD)
     txt = "\n" + "\n".join([f'{m.name}\tid={m.id}' for m in guild.members])
     await ctx.message.channel.send(txt)
+
+@bot.command()
+async def paja(ctx):
+    if str(ctx.message.author)!="Capitalismo#0388":
+        mje = ":fearful: :fist: :eggplant:"
+    else:
+        mje = ":mag_right: :eyes: :shrug:"
+    await ctx.message.channel.send(mje)
+
 bot.run(TOKEN)
